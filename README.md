@@ -2,44 +2,6 @@
 
 Move to cross using `UINavigationController`
 
-<table>
-<tr>
-<td> -2, 2 </td>
-<td> -1, 2 </td>
-<td> 0, 2 </td>
-<td> 1, 2 </td>
-<td> 2, 2 </td>
-</tr>
-<tr>
-<td> -2, 1 </td>
-<td> -1, 1 </td>
-<td> 0, 1 </td>
-<td> 1, 1 </td>
-<td> 2, 1 </td>
-</tr>
-<tr>
-<td> -2, 0 </td>
-<td> -1, 0 </td>
-<td> 0, 0 </td>
-<td> 1, 0 </td>
-<td> 2, 0 </td>
-</tr>
-<tr>
-<td> -2, -1 </td>
-<td> -1, -1 </td>
-<td> 0, -1 </td>
-<td> 1, -1 </td>
-<td> 2, -1 </td>
-</tr>
-<tr>
-<td> -2, -2 </td>
-<td> -1, -2 </td>
-<td> 0, -2 </td>
-<td> 1, -2 </td>
-<td> 2, 2  </td>
-</tr>
-</table>
-
 [![CocoaPods Compatible](http://img.shields.io/cocoapods/v/CrossNavigationcontroller.svg?style=flat)](http://cocoadocs.org/docsets/CrossNavigationcontroller)
 [![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 
