@@ -35,22 +35,26 @@ final class GestureViewController: CrossViewController, CrossGestureControllable
     }
     
     var upViewContoller: CrossViewController? {
-        didSet {
+        willSet {
+            guard let _ = newValue else { return }
             addGestureRecognizer(.up)
         }
     }
     var rightViewContoller: CrossViewController? {
-        didSet {
+        willSet {
+            guard let _ = newValue else { return }
             addGestureRecognizer(.right)
         }
     }
     var downViewContoller: CrossViewController? {
-        didSet {
+        willSet {
+            guard let _ = newValue else { return }
             addGestureRecognizer(.down)
         }
     }
     var leftViewContoller: CrossViewController? {
-        didSet {
+        willSet {
+            guard let _ = newValue else { return }
             addGestureRecognizer(.left)
         }
     }

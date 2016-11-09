@@ -15,7 +15,7 @@ class NavigationController: CrossNavigationController {
         navigationBar.isHidden = true
         
         // If change the start coordinates
-        setUp(initialCoordinate: (0, 0))
+        // setUp(initialCoordinate: (0, 0))
     }
 }
 

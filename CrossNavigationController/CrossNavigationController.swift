@@ -34,18 +34,18 @@ open class CrossNavigationController: UINavigationController {
     // Gesture
     dynamic func handlePanGesture(_ gestureRecognizer: CrossPanGestureRecognizer) {
         
-        guard let gestureView = gestureRecognizer.view else { return }
+        guard let gestureView = gestureRecognizer.view, let direction = gestureRecognizer.direction, let topViewController = topViewController as? CrossGestureControllable else { return }
         
         let nextViewController: CrossViewController?
-        switch gestureRecognizer.direction {
+        switch direction {
         case .up:
-            nextViewController = (topViewController as? CrossGestureControllable)?.upViewContoller
+            nextViewController = topViewController.upViewContoller
         case .down:
-            nextViewController = (topViewController as? CrossGestureControllable)?.downViewContoller
+            nextViewController = topViewController.downViewContoller
         case .right:
-            nextViewController = (topViewController as? CrossGestureControllable)?.rightViewContoller
+            nextViewController = topViewController.rightViewContoller
         case .left:
-            nextViewController = (topViewController as? CrossGestureControllable)?.leftViewContoller
+            nextViewController = topViewController.leftViewContoller
         }
         
         guard let viewController = nextViewController else { return }
@@ -54,10 +54,10 @@ open class CrossNavigationController: UINavigationController {
         case .began:
             interactiveTransition = UIPercentDrivenInteractiveTransition()
             interactiveTransition?.completionCurve = .easeOut
-            moveViewController(viewController, direction: gestureRecognizer.direction, animated: true)
+            moveViewController(viewController, direction: direction, animated: true)
         case .changed:
             var percent: CGFloat = 0
-            switch gestureRecognizer.direction {
+            switch direction {
             case .up, .down:
                 percent = gestureRecognizer.translation(in: gestureView).y / gestureView.bounds.height
             case .right, .left:
@@ -65,10 +65,9 @@ open class CrossNavigationController: UINavigationController {
             }
             percent = min(1, max(0, fabs(percent)))
             interactiveTransition?.update(percent)
-        case .ended,
-             .cancelled:
+        case .ended, .cancelled:
             let velocity: CGFloat
-            switch gestureRecognizer.direction {
+            switch direction {
             case .up, .down:
                 velocity = gestureRecognizer.velocity(in: view).y
             case .right, .left:
@@ -109,8 +108,7 @@ extension CrossNavigationController {
 // MARK: - Extension
 extension CrossNavigationController {
     // Required setup
-    fileprivate func configure() {
-    }
+    fileprivate func configure() {}
     open func setUp(initialCoordinate: Cross.Coordinate) {
         self.initialCoordinate = initialCoordinate
         (topViewController as? CrossViewController)?.position = initialCoordinate
@@ -148,7 +146,12 @@ extension CrossNavigationController {
         guard let viewController = viewController as? CrossViewController else {
             fatalError("Can not be used this class. Need to use the inherits from CrossViewController")
         }
-        moveViewController(viewController, direction: .right, animated: animated)
+        if viewControllers.count == 0 {
+            super.pushViewController(viewController, animated: animated)
+            return
+        }
+        // FIXME: ... crash
+//        moveViewController(viewController, direction: direction, animated: animated)
     }
     open override func popToRootViewController(animated: Bool) -> [UIViewController]? {
         return moveToRootViewController(animated: animated)

@@ -71,9 +71,30 @@ import CrossNavigationcontroller
 
 ## Usage
 
-### In `CrossNavigationcontroller`'s subclass 
+ * Change `UINavigationController` to `CrossNavigationcontroller`
+ * Change `UIViewController` to `CrossViewController`
+ * If want to use Gesture, set `CrossGestureControllable` protocol at CrossViewController subclass
+
+### Move (push, pop)
+
+```Swift
+func moveViewController(_ viewController: CrossViewController, direction : Cross.Direction, animated: Bool)
+```
+
+`Cross.Direction` => `.up` or `.down` or `.left` or `right`
+
+### Move to root
+
+```Swift
+// UINavigationController method
+func moveToRootViewController(animated: Bool) -> [UIViewController]?
+```
+
+## Customize
 
 #### If change the start coordinates
+
+In `CrossNavigationcontroller` 
 
 ```Swift
 override func viewDidLoad() {
@@ -84,27 +105,13 @@ override func viewDidLoad() {
 
 #### If use custom transition
 
+In `CrossNavigationcontroller` 
+
 ```Swift
 override func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
   return CustomTransionAnimator()
 }
 ```
-
-##### Move (push, pop)
-
-```Swift
-func moveViewController(_ viewController: CrossViewController, direction : Cross.Direction, animated: Bool)
-```
-
-`Cross.Direction` => `.up` or `.down` or `.left` or `right`
-
-##### Move to root
-```Swift
-// UINavigationController method
-func moveToRootViewController(animated: Bool) -> [UIViewController]?
-```
-
-#### 
 
 ## License
 

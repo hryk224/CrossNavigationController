@@ -19,16 +19,21 @@ extension CrossControllable {
     }
 }
 
-public protocol CrossMoveControllable: CrossControllable {
+public protocol CrossGestureControllable: CrossControllable {
+
     var upViewContoller: CrossViewController? { get set }
     var rightViewContoller: CrossViewController? { get set }
     var downViewContoller: CrossViewController? { get set }
     var leftViewContoller: CrossViewController? { get set }
     func move(_ direction: Cross.Direction)
+
+    func addGestureRecognizer(_ direction: Cross.Direction)
+    func removeGestureRecognizer(_ direction: Cross.Direction)
+    func removeAllGestureRecognizers()
 }
 
 // MARK: - Extension
-public extension CrossMoveControllable {
+public extension CrossGestureControllable {
     func move(_ direction: Cross.Direction) {
         let crossViewController: CrossViewController?
         switch direction {
@@ -46,16 +51,11 @@ public extension CrossMoveControllable {
     }
 }
 
-public protocol CrossGestureControllable: CrossMoveControllable {
-    func addGestureRecognizer(_ direction: Cross.Direction)
-    func removeGestureRecognizer(_ direction: Cross.Direction)
-    func removeAllGestureRecognizers()
-}
-
 // MARK: - Extension
 public extension CrossGestureControllable {
     func addGestureRecognizer(_ direction: Cross.Direction) {
         guard let crossNavigationController = crossNavigationController else { return }
+        guard navigationController?.view.gestureRecognizers?.filter({ ($0 as? CrossPanGestureRecognizer)?.direction == direction }).count == 0 else { return }
         let panGesture = CrossPanGestureRecognizer()
         panGesture.addTarget(crossNavigationController, action: #selector(CrossNavigationController.handlePanGesture(_:)))
         panGesture.direction = direction
