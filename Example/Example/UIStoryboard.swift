@@ -12,4 +12,7 @@ extension UIStoryboard {
     static var main: UIStoryboard {
         return UIStoryboard(name: "Main", bundle: nil)
     }
+    static var example: UIStoryboard {
+        return UIStoryboard(name: "Example", bundle: nil)
+    }
 }

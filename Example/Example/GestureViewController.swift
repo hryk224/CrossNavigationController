@@ -34,26 +34,10 @@ final class GestureViewController: CrossViewController, CrossGestureControllable
         move(.left)
     }
     
-    var upViewContoller: CrossViewController? {
-        didSet {
-            addGestureRecognizer(.up)
-        }
-    }
-    var rightViewContoller: CrossViewController? {
-        didSet {
-            addGestureRecognizer(.right)
-        }
-    }
-    var downViewContoller: CrossViewController? {
-        didSet {
-            addGestureRecognizer(.down)
-        }
-    }
-    var leftViewContoller: CrossViewController? {
-        didSet {
-            addGestureRecognizer(.left)
-        }
-    }
+    var upViewContoller: CrossViewController?
+    var rightViewContoller: CrossViewController?
+    var downViewContoller: CrossViewController?
+    var leftViewContoller: CrossViewController?
     
     static func create() -> GestureViewController {
         let controller = UIStoryboard.main.instantiateViewController(withIdentifier: "GestureScene") as! GestureViewController

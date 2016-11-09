@@ -14,6 +14,11 @@
 		ED5BBA8F1DD1BBD700117FE5 /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5BBA8E1DD1BBD700117FE5 /* GoalViewController.swift */; };
 		ED5BBA961DD1CEF600117FE5 /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5BBA951DD1CEF600117FE5 /* GestureViewController.swift */; };
 		ED5BBA981DD1D0C000117FE5 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5BBA971DD1D0C000117FE5 /* UIStoryboard.swift */; };
+		EDD2B75F1DD2EBC200108A45 /* Example.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD2B75E1DD2EBC200108A45 /* Example.storyboard */; };
+		EDD2B7621DD2EC0200108A45 /* ExampleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2B7611DD2EC0200108A45 /* ExampleNavigationController.swift */; };
+		EDD2B7641DD2EC0E00108A45 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2B7631DD2EC0E00108A45 /* ExampleViewController.swift */; };
+		EDD2B7661DD2EEFC00108A45 /* Example.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDD2B7651DD2EEFC00108A45 /* Example.plist */; };
+		EDD2B7681DD2F58000108A45 /* ExampleIncorrectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2B7671DD2F58000108A45 /* ExampleIncorrectViewController.swift */; };
 		EDF621C71DCC2D29007736BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF621C61DCC2D29007736BB /* AppDelegate.swift */; };
 		EDF621C91DCC2D29007736BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF621C81DCC2D29007736BB /* ViewController.swift */; };
 		EDF621CC1DCC2D29007736BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF621CA1DCC2D29007736BB /* Main.storyboard */; };
@@ -60,6 +65,11 @@
 		ED5BBA8E1DD1BBD700117FE5 /* GoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
 		ED5BBA951DD1CEF600117FE5 /* GestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureViewController.swift; sourceTree = "<group>"; };
 		ED5BBA971DD1D0C000117FE5 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		EDD2B75E1DD2EBC200108A45 /* Example.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Example.storyboard; sourceTree = "<group>"; };
+		EDD2B7611DD2EC0200108A45 /* ExampleNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleNavigationController.swift; sourceTree = "<group>"; };
+		EDD2B7631DD2EC0E00108A45 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		EDD2B7651DD2EEFC00108A45 /* Example.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Example.plist; sourceTree = "<group>"; };
+		EDD2B7671DD2F58000108A45 /* ExampleIncorrectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleIncorrectViewController.swift; sourceTree = "<group>"; };
 		EDF621C31DCC2D29007736BB /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF621C61DCC2D29007736BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDF621C81DCC2D29007736BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +134,18 @@
 			name = Gesture;
 			sourceTree = "<group>";
 		};
+		EDD2B7601DD2EBDD00108A45 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2B7611DD2EC0200108A45 /* ExampleNavigationController.swift */,
+				EDD2B7631DD2EC0E00108A45 /* ExampleViewController.swift */,
+				EDD2B7671DD2F58000108A45 /* ExampleIncorrectViewController.swift */,
+				EDD2B7651DD2EEFC00108A45 /* Example.plist */,
+				EDD2B75E1DD2EBC200108A45 /* Example.storyboard */,
+			);
+			name = Example;
+			sourceTree = "<group>";
+		};
 		EDF621BA1DCC2D29007736BB = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				EDF621C61DCC2D29007736BB /* AppDelegate.swift */,
+				EDD2B7601DD2EBDD00108A45 /* Example */,
 				ED5BBA941DD1CEE500117FE5 /* Gesture */,
 				ED5BBA911DD1BBFD00117FE5 /* Simple */,
 				ED5BBA901DD1BBE800117FE5 /* NavigationController */,
@@ -237,8 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDF621D11DCC2D29007736BB /* LaunchScreen.storyboard in Resources */,
+				EDD2B75F1DD2EBC200108A45 /* Example.storyboard in Resources */,
 				EDF621CE1DCC2D29007736BB /* Assets.xcassets in Resources */,
 				EDF621CC1DCC2D29007736BB /* Main.storyboard in Resources */,
+				EDD2B7661DD2EEFC00108A45 /* Example.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,10 +278,13 @@
 				ED5BBA8D1DD1BBC100117FE5 /* StartViewController.swift in Sources */,
 				EDF621C91DCC2D29007736BB /* ViewController.swift in Sources */,
 				EDF622261DCC2FFC007736BB /* NavigationController.swift in Sources */,
+				EDD2B7681DD2F58000108A45 /* ExampleIncorrectViewController.swift in Sources */,
 				ED5BBA981DD1D0C000117FE5 /* UIStoryboard.swift in Sources */,
 				ED5BBA8F1DD1BBD700117FE5 /* GoalViewController.swift in Sources */,
 				EDF621C71DCC2D29007736BB /* AppDelegate.swift in Sources */,
+				EDD2B7621DD2EC0200108A45 /* ExampleNavigationController.swift in Sources */,
 				ED5BBA8B1DD1B8D300117FE5 /* MenuViewController.swift in Sources */,
+				EDD2B7641DD2EC0E00108A45 /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

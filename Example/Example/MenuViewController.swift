@@ -10,7 +10,7 @@ import UIKit
 
 final class MenuViewController: UITableViewController {
     fileprivate let reuseIdentifier = "Cell"
-    fileprivate let cells: [(title: String, color: UIColor)] = [("simple", .green), ("gesture", .red),]
+    fileprivate let cells: [(title: String, color: UIColor)] = [("simple", .green), ("gesture", .red), ("example", .yellow)]
     private var cellHeight: CGFloat {
         return tableView.bounds.height / CGFloat(cells.count)
     }
@@ -39,11 +39,12 @@ extension MenuViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            let storyboard = UIStoryboard.main
-            let navigationController = storyboard.instantiateViewController(withIdentifier: "NaviScene")
+            let navigationController = UIStoryboard.main.instantiateViewController(withIdentifier: "NaviScene")
             UIApplication.shared.keyWindow?.rootViewController = navigationController
         case 1:
             UIApplication.shared.keyWindow?.rootViewController = NavigationController(rootViewController: GestureViewController.create())
+        case 2:
+            UIApplication.shared.keyWindow?.rootViewController = UIStoryboard.example.instantiateInitialViewController()
         default:
             break
         }

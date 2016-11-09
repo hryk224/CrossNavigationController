@@ -6,4 +6,13 @@
 //  Copyright © 2016年 hryk224. All rights reserved.
 //
 
-final class StartViewController: ViewController {}
+import UIKit.UILabel
+
+final class StartViewController: ViewController {
+    @IBOutlet weak var startLabel: UILabel! {
+        didSet {
+            startLabel.layer.borderWidth = 1
+            startLabel.layer.borderColor = startLabel.textColor.cgColor
+        }
+    }
+}

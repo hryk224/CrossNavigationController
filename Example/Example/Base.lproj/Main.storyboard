@@ -210,12 +210,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7M-JH-jSR">
-                                <rect key="frame" x="20" y="587" width="335" height="60"/>
+                                <rect key="frame" x="20" y="603" width="335" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="wjd-gF-VlA"/>
+                                    <constraint firstAttribute="height" constant="44" id="wjd-gF-VlA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvb-Ym-l5W">
@@ -253,6 +253,7 @@
                         <outlet property="label" destination="fvb-Ym-l5W" id="n74-yv-iNv"/>
                         <outlet property="leftButton" destination="qqB-cz-QmA" id="GCl-NN-8go"/>
                         <outlet property="rightButton" destination="VbS-A8-3QF" id="ap0-bR-uyf"/>
+                        <outlet property="startLabel" destination="a7M-JH-jSR" id="p3I-u8-o3k"/>
                         <outlet property="upButton" destination="WZe-My-4sB" id="crx-LD-dEt"/>
                     </connections>
                 </viewController>
@@ -325,12 +326,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ac-Er-PK4">
-                                <rect key="frame" x="20" y="587" width="335" height="60"/>
-                                <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="20" y="603" width="335" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.23623605910000001" blue="0.16962993230000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="eYy-Co-9Jq"/>
+                                    <constraint firstAttribute="height" constant="44" id="eYy-Co-9Jq"/>
                                 </constraints>
-                                <state key="normal" title="Goal ! ( pop to root )"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Goal ! ( Going back to square one )"/>
                                 <connections>
                                     <action selector="goRoot:" destination="Q4a-tG-v63" eventType="touchUpInside" id="ZOA-oa-fCw"/>
                                 </connections>
@@ -456,8 +458,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="FKi-YW-uZn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Back root"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Going back to square one"/>
                                 <connections>
                                     <action selector="goRoot:" destination="xk8-2O-u7M" eventType="touchUpInside" id="Sb3-g4-uZR"/>
                                 </connections>
@@ -492,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhr-ZP-AxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1217" y="726"/>
+            <point key="canvasLocation" x="-1217" y="700"/>
         </scene>
     </scenes>
 </document>

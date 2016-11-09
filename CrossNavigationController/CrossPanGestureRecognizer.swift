@@ -9,7 +9,7 @@
 import UIKit.UIGestureRecognizerSubclass
 
 final class CrossPanGestureRecognizer: UIPanGestureRecognizer {
-    var direction: Cross.Direction = .right
+    var direction: Cross.Direction?
     private var isMoved: Bool = false
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesMoved(touches, with: event)
