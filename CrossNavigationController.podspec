@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "CrossNavigationController"
-  s.version      = "0.1.0"
-  s.summary      = "Infinite Scrolling Using UICollectionView."
+  s.version      = "0.1.1"
+  s.summary      = "Move to cross using UINavigationController."
   s.homepage     = "https://github.com/hryk224/CrossNavigationController"
   s.screenshots  = "https://github.com/hryk224/CrossNavigationController/wiki/images/sample.gif"
   s.license      = { :type => "MIT", :file => "LICENSE" }
