@@ -2,7 +2,7 @@
 
 Move to cross using `UINavigationController`
 
-[![CocoaPods Compatible](http://img.shields.io/cocoapods/v/CrossNavigationcontroller.svg?style=flat)](http://cocoadocs.org/docsets/CrossNavigationcontroller)
+[![CocoaPods Compatible](http://img.shields.io/cocoapods/v/CrossNavigationController.svg?style=flat)](http://cocoadocs.org/docsets/CrossNavigationcontroller)
 [![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 
 <img src="https://github.com/hryk224/CrossNavigationcontroller/wiki/images/sample.gif" width="320" >
