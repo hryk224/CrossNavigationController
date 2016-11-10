@@ -109,9 +109,9 @@
 		ED5BBA911DD1BBFD00117FE5 /* Simple */ = {
 			isa = PBXGroup;
 			children = (
-				EDF621C81DCC2D29007736BB /* ViewController.swift */,
-				ED5BBA8C1DD1BBC100117FE5 /* StartViewController.swift */,
 				ED5BBA8E1DD1BBD700117FE5 /* GoalViewController.swift */,
+				ED5BBA8C1DD1BBC100117FE5 /* StartViewController.swift */,
+				EDF621C81DCC2D29007736BB /* ViewController.swift */,
 			);
 			name = Simple;
 			sourceTree = "<group>";
@@ -128,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				EDF621C51DCC2D29007736BB /* Example */,
-				EDF621C41DCC2D29007736BB /* Products */,
 				ED1FD7C01DD0770C005A3ABF /* Frameworks */,
+				EDF621C41DCC2D29007736BB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,16 +144,16 @@
 		EDF621C51DCC2D29007736BB /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				EDF621C61DCC2D29007736BB /* AppDelegate.swift */,
 				ED5BBA941DD1CEE500117FE5 /* Gesture */,
-				ED5BBA911DD1BBFD00117FE5 /* Simple */,
 				ED5BBA901DD1BBE800117FE5 /* NavigationController */,
+				ED5BBA911DD1BBFD00117FE5 /* Simple */,
+				EDF621C61DCC2D29007736BB /* AppDelegate.swift */,
+				EDF621CD1DCC2D29007736BB /* Assets.xcassets */,
+				EDF621D21DCC2D29007736BB /* Info.plist */,
+				EDF621CF1DCC2D29007736BB /* LaunchScreen.storyboard */,
+				EDF621CA1DCC2D29007736BB /* Main.storyboard */,
 				ED5BBA8A1DD1B8D300117FE5 /* MenuViewController.swift */,
 				ED5BBA971DD1D0C000117FE5 /* UIStoryboard.swift */,
-				EDF621CA1DCC2D29007736BB /* Main.storyboard */,
-				EDF621CD1DCC2D29007736BB /* Assets.xcassets */,
-				EDF621CF1DCC2D29007736BB /* LaunchScreen.storyboard */,
-				EDF621D21DCC2D29007736BB /* Info.plist */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -236,8 +236,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDF621D11DCC2D29007736BB /* LaunchScreen.storyboard in Resources */,
 				EDF621CE1DCC2D29007736BB /* Assets.xcassets in Resources */,
+				EDF621D11DCC2D29007736BB /* LaunchScreen.storyboard in Resources */,
 				EDF621CC1DCC2D29007736BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,14 +249,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED5BBA961DD1CEF600117FE5 /* GestureViewController.swift in Sources */,
-				ED5BBA8D1DD1BBC100117FE5 /* StartViewController.swift in Sources */,
-				EDF621C91DCC2D29007736BB /* ViewController.swift in Sources */,
-				EDF622261DCC2FFC007736BB /* NavigationController.swift in Sources */,
-				ED5BBA981DD1D0C000117FE5 /* UIStoryboard.swift in Sources */,
-				ED5BBA8F1DD1BBD700117FE5 /* GoalViewController.swift in Sources */,
 				EDF621C71DCC2D29007736BB /* AppDelegate.swift in Sources */,
+				ED5BBA961DD1CEF600117FE5 /* GestureViewController.swift in Sources */,
+				ED5BBA8F1DD1BBD700117FE5 /* GoalViewController.swift in Sources */,
 				ED5BBA8B1DD1B8D300117FE5 /* MenuViewController.swift in Sources */,
+				EDF622261DCC2FFC007736BB /* NavigationController.swift in Sources */,
+				ED5BBA8D1DD1BBC100117FE5 /* StartViewController.swift in Sources */,
+				ED5BBA981DD1D0C000117FE5 /* UIStoryboard.swift in Sources */,
+				EDF621C91DCC2D29007736BB /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
