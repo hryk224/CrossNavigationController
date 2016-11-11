@@ -55,7 +55,7 @@ public extension CrossGestureControllable {
 public extension CrossGestureControllable {
     func addGestureRecognizer(_ direction: Cross.Direction) {
         guard let crossNavigationController = crossNavigationController else { return }
-        guard navigationController?.view.gestureRecognizers?.filter({ ($0 as? CrossPanGestureRecognizer)?.direction == direction }).count == 0 else { return }
+        guard navigationController?.view.gestureRecognizers?.filter({ ($0 as? CrossPanGestureRecognizer)?.direction == direction }).isEmpty == true else { return }
         let panGesture = CrossPanGestureRecognizer()
         panGesture.addTarget(crossNavigationController, action: #selector(CrossNavigationController.handlePanGesture(_:)))
         panGesture.direction = direction

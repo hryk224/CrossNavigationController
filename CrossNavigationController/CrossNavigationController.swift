@@ -146,7 +146,7 @@ extension CrossNavigationController {
         guard let viewController = viewController as? CrossViewController else {
             fatalError("Can not be used this class. Need to use the inherits from CrossViewController")
         }
-        if viewControllers.count == 0 {
+        if viewControllers.isEmpty {
             super.pushViewController(viewController, animated: animated)
             return
         }
