@@ -6,6 +6,8 @@
 //  Copyright © 2016年 hryk224. All rights reserved.
 //
 
+import UIKit
+
 public protocol CrossControllable: class {
     var view: UIView! { set get }
     var navigationController: UINavigationController? { get }
