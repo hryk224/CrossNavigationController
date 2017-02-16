@@ -6,7 +6,7 @@
 //  Copyright © 2016年 hryk224. All rights reserved.
 //
 
-import UIKit.UINavigationController
+import UIKit
 
 open class CrossNavigationController: UINavigationController {
     

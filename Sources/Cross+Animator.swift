@@ -6,7 +6,8 @@
 //  Copyright © 2016年 hryk224. All rights reserved.
 //
 
-import Foundation.NSObject
+import UIKit
+import Foundation
 
 extension Cross {
     final class Animator: NSObject {
